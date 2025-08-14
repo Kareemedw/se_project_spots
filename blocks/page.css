@@ -2,4 +2,7 @@
   background-color: #fcf5e5;
   font-family: "Poppins", Arial, Helvetica, sans-serifs;
   font-weight: 400;
+  max-width: 1440px;
+  max-height: 1416px;
+  box-sizing: border-box;
 }
