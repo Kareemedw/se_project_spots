@@ -1,0 +1,122 @@
+.profile {
+  width: 88vw;
+  height: 25vh;
+  display: flex;
+  gap: 20px;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__image {
+  width: 190px;
+  height: 190px;
+  border-radius: 30px;
+}
+
+.profile__content {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: 190px;
+}
+
+.profile__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile__title-name {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.profile__title-description {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.profile__edit-btn {
+  margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  width: 110px;
+  height: 16px;
+  background: #fcf5e5;
+  border-style: none;
+  margin-top: auto;
+}
+
+.profile__button {
+  color: #fcf5e5;
+  background-color: #212121;
+  width: 149px;
+  height: 52px;
+  align-self: flex-end;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.profile__button-title {
+  width: 73px;
+  height: 16px;
+  margin: 0 auto;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 630px) {
+  .profile {
+    flex-direction: column;
+    max-width: 282px;
+    align-items: center;
+    height: 274px;
+  }
+
+  .profile__image {
+    margin-right: 0;
+    height: 80px;
+    width: 80px;
+  }
+
+  .profile__content {
+    margin: 0 auto;
+    justify-content: center;
+    width: 235px;
+  }
+
+  .profile__title {
+    gap: 6px;
+  }
+
+  .profile__title-description {
+    margin: 0 auto;
+  }
+
+  .profile__edit-btn {
+    margin: 32px auto 0;
+  }
+
+  .profile__button {
+    margin: auto;
+    width: -webkit-fill-available;
+  }
+}

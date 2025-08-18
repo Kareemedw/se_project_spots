@@ -1,0 +1,32 @@
+.cards {
+  width: 88.9vw;
+  height: 120vh;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.cards__list {
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
+  justify-content: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1439px) {
+  .cards {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .cards {
+    height: 300vh;
+  }
+
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+    gap: 40px 20px;
+    justify-content: center;
+  }
+}
