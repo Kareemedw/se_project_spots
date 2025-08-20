@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   height: 46px;
-  background-color: #ffffff;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,13 +12,4 @@
   width: 94px;
   height: 26px;
   border-bottom: 0.2px;
-}
-
-@media screen and (max-width: 630px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-  }
 }

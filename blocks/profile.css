@@ -1,6 +1,4 @@
 .profile {
-  width: 88vw;
-  height: 25vh;
   display: flex;
   gap: 20px;
   padding: 34px 0 20px;
@@ -34,6 +32,7 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
+  width: max-content;
 }
 
 .profile__title-description {
@@ -54,11 +53,18 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
-  width: 110px;
+  width: 117px;
   height: 16px;
   background: #fcf5e5;
   border-style: none;
   margin-top: auto;
+  cursor: pointer;
+  opacity: 70%;
+  transition: opacity 0.3s ease;
+}
+
+.profile__edit-btn:hover {
+  opacity: 100%;
 }
 
 .profile__button {
@@ -69,6 +75,13 @@
   align-self: flex-end;
   border-radius: 8px;
   margin-left: auto;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.profile__button:hover {
+  opacity: 70%;
 }
 
 .profile__button-title {

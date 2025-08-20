@@ -1,6 +1,4 @@
 .cards {
-  width: 88.9vw;
-  height: 120vh;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
@@ -11,22 +9,19 @@
   gap: 40px 20px;
   justify-content: center;
   list-style-type: none;
-}
-
-@media screen and (max-width: 1439px) {
-  .cards {
-    height: 100%;
-  }
+  margin-bottom: 36px;
 }
 
 @media screen and (max-width: 630px) {
   .cards {
-    height: 300vh;
+    padding: 20px 0 20px;
+    height: 100%;
   }
 
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
     gap: 40px 20px;
     justify-content: center;
+    margin-bottom: 16px;
   }
 }

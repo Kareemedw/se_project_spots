@@ -1,40 +1,12 @@
 .page {
   background-color: #fcf5e5;
-  font-family: "Poppins", Arial, Helvetica, sans-serifs;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   box-sizing: border-box;
-  min-height: 180vh;
+  min-height: 100vh;
 }
 
 .page__section {
   max-width: 1280px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1070px) {
-  .page {
-    background-color: #fcf5e5;
-    width: fit-content;
-  }
-}
-
-@media screen and (max-width: 630px) {
-  .page {
-    background-color: #fcf5e5;
-    width: fit-content;
-  }
-}
-
-@media screen and (max-width: 363px) {
-  .page {
-    background-color: #fcf5e5;
-    width: fit-content;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .page {
-    background-color: #fcf5e5;
-    width: fit-content;
-  }
 }
