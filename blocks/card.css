@@ -1,6 +1,5 @@
 .card {
-  width: 413px;
-  height: 445px;
+  width: 100%;
 }
 
 .card__image {
@@ -47,14 +46,22 @@
   border-style: none;
 }
 
+.card__content-button:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 630px) {
   .card {
-    height: 318px;
-    width: 288px;
+    width: 100%;
   }
 
   .card__image {
     width: 288px;
     height: 288px;
+  }
+
+  .card__content-name {
+    max-width: 250px;
+    font-size: 16px;
   }
 }

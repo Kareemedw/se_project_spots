@@ -8,14 +8,13 @@
 .profile__image {
   width: 190px;
   height: 190px;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
 .profile__content {
   display: flex;
   flex-direction: column;
-  width: 420px;
-  height: 190px;
+  max-width: 100%;
 }
 
 .profile__title {
@@ -46,6 +45,8 @@
 }
 
 .profile__edit-btn {
+  display: flex;
+  gap: 8px;
   margin: 0;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -53,8 +54,6 @@
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
-  width: 117px;
-  height: 16px;
   background: #fcf5e5;
   border-style: none;
   margin-top: auto;
@@ -74,6 +73,11 @@
   height: 52px;
   align-self: flex-end;
   border-radius: 8px;
+  border: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   cursor: pointer;
   opacity: 100%;
@@ -81,7 +85,7 @@
 }
 
 .profile__button:hover {
-  opacity: 70%;
+  opacity: 80%;
 }
 
 .profile__button-title {
