@@ -23,3 +23,4 @@ This project exported images directly from Figma.
 This webpage is deployed to GitHub.
 
 Deployment Link: https://kareemedw.github.io/se_project_spots/
+Video link on how I created this project: https://drive.google.com/file/d/17zY6YycL8Q89cqIaMy8VNuRFpFPJCujx/view?usp=sharing
