@@ -1,0 +1,124 @@
+.modal {
+  visibility: hidden;
+  background-color: #00000080;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.modal_is-opened {
+  visibility: visible;
+  display: flex;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 730px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  padding: 32px 50px;
+}
+
+.modal__close-btn {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  position: absolute;
+  top: 32px;
+  right: 50px;
+}
+
+.modal__title {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 0 36px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.modal__label_name {
+  margin: 0 0 32px;
+}
+
+.modal__label_description {
+  margin: 0 0 32px;
+}
+
+.modal__label_image {
+  margin: 0 0 32px;
+}
+
+.modal__label_caption {
+  margin: 0 0 32px;
+}
+
+.modal__input {
+  margin: 8px 0 0;
+  border-radius: 8px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #212121;
+  padding: 16px 0 16px 12px;
+}
+
+.modal__input::placeholder {
+  color: #212121;
+  opacity: 30%;
+}
+
+.modal__submit-btn {
+  background-color: #212121;
+  padding: 18px 58px;
+  max-width: 156px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fcf5e5;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 630px) {
+  .modal__title {
+    font-size: 1.25rem;
+  }
+
+  .modal__submit-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
