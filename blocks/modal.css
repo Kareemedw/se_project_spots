@@ -7,6 +7,8 @@
   bottom: 0;
   left: 0;
   padding: 10px;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
 .modal_is-opened {
@@ -15,6 +17,8 @@
   border-radius: 8px;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .modal__container {
@@ -39,6 +43,13 @@
   position: absolute;
   top: 32px;
   right: 50px;
+}
+
+.modal__close-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+  border: 1px rgba(33, 33, 33) solid;
+  border-radius: 50%;
 }
 
 .modal__title {

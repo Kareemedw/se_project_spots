@@ -140,6 +140,7 @@
   .profile__title-name {
     max-width: 288px;
     font-size: 1.25rem;
+    text-align: center;
   }
 
   .profile__title-description {
