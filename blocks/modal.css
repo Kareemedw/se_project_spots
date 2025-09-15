@@ -33,13 +33,17 @@
   box-sizing: border-box;
 }
 
+.modal__card-container {
+  position: relative;
+}
+
 .modal__close-btn {
   height: 40px;
   width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background: transparent url(../images/X-icon.svg) center no-repeat;
   border: none;
   position: absolute;
   top: 32px;
@@ -52,6 +56,58 @@
   opacity: 1;
   border: 1px rgba(33, 33, 33) solid;
   border-radius: 50%;
+}
+
+.modal__close-button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent url(../images/close-icon.svg) center no-repeat;
+  border: none;
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.modal__close-button:hover {
+  opacity: 40%;
+}
+
+.modal__close-button_preview {
+  top: 0;
+  right: -52.5px;
+  padding: 0;
+}
+
+.modal__image {
+  padding: 0;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color: #ffffff;
+  background-color: #212121;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+  width: 214px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 0;
 }
 
 .modal__title {
@@ -122,6 +178,15 @@
 @media screen and (max-width: 630px) {
   .modal__container {
     padding: 22px 12px;
+  }
+
+  .modal__image {
+    max-width: unset;
+  }
+
+  .modal__close-button {
+    top: -48px;
+    right: 0;
   }
 
   .modal__close-btn {

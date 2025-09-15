@@ -1,5 +1,6 @@
 .card {
   width: 100%;
+  position: relative;
 }
 
 .card__image {
@@ -35,10 +36,16 @@
   cursor: pointer;
   opacity: 40%;
   transition: opacity 0.3s ease;
+  background: transparent url(../images/heart.svg) center no-repeat;
 }
 
 .card__content-image:hover {
   opacity: 100%;
+}
+
+.card__content-image_active {
+  background-image: url(../images/liked-color.svg);
+  opacity: 1;
 }
 
 .card__content-button {
@@ -51,6 +58,32 @@
   cursor: pointer;
 }
 
+.card__delete-btn {
+  border-style: none;
+  background: transparent url(../images/delete-icon.svg) center no-repeat;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  left: 371px;
+  top: 10px;
+}
+
+.card__delete-btn:hover {
+  cursor: pointer;
+  background-color: #ff6565;
+}
+
+.card__delete-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.card__delete-icon:hover {
+}
+
 @media screen and (max-width: 630px) {
   .card__image {
     width: 288px;
@@ -60,5 +93,9 @@
   .card__content-name {
     max-width: 250px;
     font-size: 16px;
+  }
+
+  .card__delete-btn {
+    left: 246px;
   }
 }

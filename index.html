@@ -40,110 +40,20 @@
         </section>
         <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/kassandra-pic1.svg"
-                alt="A snowy view of a mountain and a house"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">Val Thorens</h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
+            <template id="card-template">
+              <li class="card">
+                <button type="button" class="card__delete-btn">
+                  <div class="card__delete-icon"></div>
                 </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/kassandra-pic2.svg"
-                alt="Restaurant terrace"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">Restaurant terrace</h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/kassandra-pic3.svg"
-                alt="An outdoor cafe"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">An outdoor cafe</h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/kassandra-pic4.svg"
-                alt="A very long bridge, over the forest..."
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">
-                  A very long bridge, over the forest...
-                </h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/kassandra-pic5.svg"
-                alt="Tunnel with morning light"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">Tunnel with morning light</h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/kassandra-pic6.svg"
-                alt="Mountain house"
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__content-name">Mountain house</h2>
-                <button type="button" class="card__content-button">
-                  <img
-                    src="./images/heart.svg"
-                    alt="Heart icon"
-                    class="card__content-image"
-                  />
-                </button>
-              </div>
-            </li>
+                <img src="" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__content-name"></h2>
+                  <button type="button" class="card__content-button">
+                    <div class="card__content-image"></div>
+                  </button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -152,9 +62,7 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/X-icon.svg" alt="X-icon" />
-          </button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
             <label
@@ -185,9 +93,7 @@
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/X-icon.svg" alt="X-icon" />
-          </button>
+          <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New post</h2>
           <form class="modal__form">
             <label
@@ -214,6 +120,16 @@
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
+        </div>
+      </div>
+      <div class="modal" id="card-modal">
+        <div class="modal__card-container">
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_preview"
+          ></button>
+          <img src="" alt="" class="modal__image" />
+          <p class="modal__caption"></p>
         </div>
       </div>
     </div>
