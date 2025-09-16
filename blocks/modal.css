@@ -76,7 +76,7 @@
   opacity: 40%;
 }
 
-.modal__close-button_preview {
+.modal__close-button_type_preview {
   top: 0;
   right: -52.5px;
   padding: 0;
@@ -84,8 +84,6 @@
 
 .modal__image {
   padding: 0;
-  border-radius: 8px;
-  width: 100%;
   max-width: 80vw;
   max-height: 80vh;
   width: 100%;
@@ -107,6 +105,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
   margin: 8px 0 0;
 }
 
@@ -173,6 +174,12 @@
   color: #fcf5e5;
   border-radius: 8px;
   cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.modal__submit-btn:hover {
+  opacity: 80%;
 }
 
 @media screen and (max-width: 630px) {

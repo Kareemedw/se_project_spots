@@ -1,6 +1,7 @@
 .card {
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .card__image {
@@ -9,6 +10,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .card__content {

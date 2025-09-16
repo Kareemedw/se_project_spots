@@ -28,12 +28,12 @@
               <h1 class="profile__title-name">Bessie Coleman</h1>
               <p class="profile__title-description">Civil Aviator</p>
             </div>
-            <button type="button" class="profile__edit-btn">
+            <button type="button" class="profile__edit-btn" aria-label="Open">
               <img src="./images/pen-icon.svg" alt="Pen icon" />
               Edit Profile
             </button>
           </div>
-          <button type="button" class="profile__button">
+          <button type="button" class="profile__button" aria-label="Open">
             <img src="./images/plus-icon.svg" alt="Plus icon" />
             New Post
           </button>
@@ -42,14 +42,18 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <button type="button" class="card__delete-btn">
+                <button
+                  type="button"
+                  class="card__delete-btn"
+                  aria-label="Delete"
+                >
                   <div class="card__delete-icon"></div>
                 </button>
-                <img src="" alt="" class="card__image" />
+                <img src="#" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__content-name"></h2>
                   <button type="button" class="card__content-button">
-                    <div class="card__content-image"></div>
+                    <div class="card__content-image" aria-label="Like"></div>
                   </button>
                 </div>
               </li>
@@ -62,7 +66,11 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="Close"
+          ></button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
             <label
@@ -87,13 +95,19 @@
                 placeholder="Describe yourself"
               />
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-btn" aria-label="Submit">
+              Save
+            </button>
           </form>
         </div>
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="Close"
+          ></button>
           <h2 class="modal__title">New post</h2>
           <form class="modal__form">
             <label
@@ -118,7 +132,9 @@
                 placeholder="Type your caption"
               />
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-btn" aria-label="Submit">
+              Save
+            </button>
           </form>
         </div>
       </div>
@@ -126,9 +142,10 @@
         <div class="modal__card-container">
           <button
             type="button"
-            class="modal__close-button modal__close-button_preview"
+            class="modal__close-button modal__close-button_type_preview"
+            aria-label="Close"
           ></button>
-          <img src="" alt="" class="modal__image" />
+          <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>

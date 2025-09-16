@@ -74,7 +74,8 @@ function getCardElement(data) {
   const cardTitle = cardElement.querySelector(".card__content-name");
   const cardImage = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__content-image");
-  cardLikeBtn.addEventListener("click", () => {
+  cardLikeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     cardLikeBtn.classList.toggle("card__content-image_active");
   });
   cardImage.src = data.link;
@@ -82,11 +83,12 @@ function getCardElement(data) {
   cardTitle.textContent = data.name;
 
   const cardDeletebtn = cardElement.querySelector(".card__delete-icon");
-  cardDeletebtn.addEventListener("click", () => {
+  cardDeletebtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     cardElement.remove();
   });
 
-  cardElement.addEventListener("click", function () {
+  cardImage.addEventListener("click", function () {
     previewCardImage.src = data.link;
     previewCardImage.alt = data.name;
     previewCardCaption.textContent = data.name;
