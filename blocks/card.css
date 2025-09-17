@@ -38,7 +38,6 @@
   cursor: pointer;
   opacity: 40%;
   transition: opacity 0.3s ease;
-  background: transparent url(../images/heart.svg) center no-repeat;
 }
 
 .card__content-image:hover {
@@ -48,6 +47,10 @@
 .card__content-image_active {
   background-image: url(../images/liked-color.svg);
   opacity: 1;
+}
+
+.card__content-image_active:hover {
+  opacity: 40%;
 }
 
 .card__content-button {
@@ -73,6 +76,7 @@
 .card__delete-btn:hover {
   cursor: pointer;
   background-color: #ff6565;
+  border-radius: 50%;
 }
 
 .card__delete-icon {
@@ -81,9 +85,6 @@
   cursor: pointer;
   opacity: 100%;
   transition: opacity 0.3s ease;
-}
-
-.card__delete-icon:hover {
 }
 
 @media screen and (max-width: 630px) {

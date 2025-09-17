@@ -30,20 +30,22 @@ const initialCards = [
 ];
 
 const previewCardModal = document.querySelector("#card-modal");
-const previewCardCloseBtn = previewCardModal.querySelector(
-  ".modal__close-button"
-);
+const previewCardCloseBtn = previewCardModal.querySelector(".modal__close-btn");
 const previewCardImage = previewCardModal.querySelector(".modal__image");
 const previewCardCaption = previewCardModal.querySelector(".modal__caption");
 
-previewCardCloseBtn.addEventListener("click", function () {
-  closeModal(previewCardModal);
+const closeButtons = document.querySelectorAll(".modal__close-btn");
+
+closeButtons.forEach((button) => {
+  const modal = button.closest(".modal");
+
+  button.addEventListener("click", () => closeModal(modal));
 });
 
 const editProfileButton = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
-const editProfileForm = editProfileModal.querySelector(".modal__form");
+const editProfileForm = document.forms["edit-modal-form"];
 const editProfileNameInput = editProfileModal.querySelector(
   "#profile-name-input"
 );
@@ -59,7 +61,7 @@ const editProfileDescription = document.querySelector(
 const newPostButton = document.querySelector(".profile__button");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close-btn");
-const newPostForm = newPostModal.querySelector(".modal__form");
+const newPostForm = document.forms["new_post-modal-form"];
 const newPostLinkInput = newPostModal.querySelector("#card-image-input");
 const newPostCaptionInput = newPostModal.querySelector("#card-caption-input");
 
@@ -82,8 +84,8 @@ function getCardElement(data) {
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
 
-  const cardDeletebtn = cardElement.querySelector(".card__delete-icon");
-  cardDeletebtn.addEventListener("click", (e) => {
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-icon");
+  cardDeleteBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     cardElement.remove();
   });
@@ -112,9 +114,6 @@ editProfileButton.addEventListener("click", function () {
   editProfileDescriptionInput.value = editProfileDescription.textContent;
   openModal(editProfileModal);
 });
-editProfileCloseBtn.addEventListener("click", function () {
-  closeModal(editProfileModal);
-});
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
@@ -127,9 +126,6 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 newPostButton.addEventListener("click", function () {
   openModal(newPostModal);
-});
-newPostCloseBtn.addEventListener("click", function () {
-  closeModal(newPostModal);
 });
 
 function handleAddCardSubmit(evt) {

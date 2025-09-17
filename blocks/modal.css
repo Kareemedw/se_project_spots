@@ -2,7 +2,6 @@
   visibility: hidden;
   background-color: #00000080;
   display: flex;
-  border-radius: 8px;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -58,28 +57,14 @@
   border-radius: 50%;
 }
 
-.modal__close-button {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent url(../images/close-icon.svg) center no-repeat;
-  border: none;
-  position: absolute;
-  top: 32px;
-  right: 50px;
-  cursor: pointer;
-}
-
-.modal__close-button:hover {
-  opacity: 40%;
-}
-
-.modal__close-button_type_preview {
+.modal__close-btn_type_preview {
   top: 0;
   right: -52.5px;
   padding: 0;
+}
+
+.modal__close-btn_type_preview:hover {
+  opacity: 40%;
 }
 
 .modal__image {
@@ -156,6 +141,12 @@
   letter-spacing: 0;
   color: #212121;
   padding: 16px 0 16px 12px;
+  opacity: 40%;
+  cursor: pointer;
+}
+
+.modal__input:hover {
+  opacity: 100%;
 }
 
 .modal__input::placeholder {
@@ -176,6 +167,7 @@
   cursor: pointer;
   opacity: 100%;
   transition: opacity 0.3s ease;
+  border: none;
 }
 
 .modal__submit-btn:hover {
@@ -194,6 +186,10 @@
   .modal__close-button {
     top: -48px;
     right: 0;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 
   .modal__close-btn {
