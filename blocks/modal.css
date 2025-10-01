@@ -61,6 +61,7 @@
   top: 0;
   right: -52.5px;
   padding: 0;
+  background: transparent url(../images/white-X.svg) center no-repeat;
 }
 
 .modal__close-btn_type_preview:hover {
