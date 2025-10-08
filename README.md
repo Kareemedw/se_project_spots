@@ -2,7 +2,9 @@
 
 ## Description
 
-This project is made so all the elements are displayed correctly on popular screen sizes.
+This project is made so all the elements are displayed correctly on popular screen sizes. This basic web application allows the user to change profile name and job title and upload pictures to their profile page using picture links.
+
+⚡ How It Works:
 
 **Figma**
 
