@@ -186,7 +186,7 @@
   border: none;
 }
 
-.modal__submit_btn_disabled {
+.modal__submit_btn_type_disabled {
   opacity: 50%;
   background-color: #212121;
   user-select: none;
@@ -206,7 +206,7 @@
     max-width: unset;
   }
 
-  .modal__close-button {
+  .modal__close-btn {
     top: -48px;
     right: 0;
   }
@@ -229,7 +229,7 @@
     font-size: 1.25rem;
   }
 
-  .modal__submit-btn {
+  .modal__submit_btn {
     width: 100%;
     max-width: none;
   }
