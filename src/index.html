@@ -13,12 +13,16 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Spots logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/coleman.svg"
+            src="<%=require('./images/coleman.svg')%>"
             alt="Bessie Coleman"
             class="profile__image"
           />
@@ -28,12 +32,12 @@
               <p class="profile__title-description">Civil Aviator</p>
             </div>
             <button type="button" class="profile__edit-btn" aria-label="Open">
-              <img src="./images/pen-icon.svg" alt="Pen icon" />
+              <img src="<%=require('./images/pen-icon.svg')%>" alt="Pen icon" />
               Edit Profile
             </button>
           </div>
           <button type="button" class="profile__button" aria-label="Open">
-            <img src="./images/plus-icon.svg" alt="Plus icon" />
+            <img src="<%=require('./images/plus-icon.svg')%>" alt="Plus icon" />
             New Post
           </button>
         </section>
@@ -53,7 +57,7 @@
                   <h2 class="card__content-name"></h2>
                   <button type="button" class="card__content-button">
                     <img
-                      src="./images/heart.svg"
+                      src="<%=require('./images/heart.svg')%>"
                       alt="Heart Icon"
                       class="card__content-image"
                       aria-label="Like"
