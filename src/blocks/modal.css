@@ -58,8 +58,8 @@
 }
 
 .modal__close-btn_type_preview {
-  top: 0;
-  right: -52.5px;
+  top: -10px;
+  right: -35.5px;
   padding: 0;
   background: transparent url(../images/white-X.svg) center no-repeat;
 }
