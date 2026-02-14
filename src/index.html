@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,11 +21,20 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="<%=require('./images/coleman.svg')%>"
-            alt="Bessie Coleman"
-            class="profile__image"
-          />
+          <div class="profile__avatar-container">
+            <button type="button" class="profile__avatar-btn" aria-label="Open">
+              <img
+                src="<%=require('./images/pencil-light.svg')%>"
+                alt="Pencil Icon"
+                class="profile__pencil-light"
+              />
+            </button>
+            <img
+              src="<%=require('./images/coleman.svg')%>"
+              alt="Bessie Coleman"
+              class="profile__image"
+            />
+          </div>
           <div class="profile__content">
             <div class="profile__title">
               <h1 class="profile__title-name">Bessie Coleman</h1>
@@ -172,6 +181,62 @@
           ></button>
           <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
+        </div>
+      </div>
+      <div class="modal" id="avatar-modal">
+        <div class="modal__container">
+          <button
+            type="button"
+            class="modal__close-btn"
+            aria-label="Close"
+          ></button>
+          <h2 class="modal__title">Edit Avatar</h2>
+          <form class="modal__form" id="edit-avatar-form" novalidate>
+            <label for="profile-avatar-input" class="modal__label"
+              >Profile Picture
+              <input
+                id="profile-avatar-input"
+                type="url"
+                class="modal__input"
+                placeholder="Paste the link to an image"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit_btn" aria-label="Submit">
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="delete-modal">
+        <div class="modal__container">
+          <button
+            type="button"
+            class="modal__close-btn modal__close-btn_delete"
+            aria-label="Close"
+          ></button>
+          <h2 class="modal__title modal__title-delete_caption">
+            Are you sure you want to delete this image?
+          </h2>
+          <form class="modal__form modal__form-delete" id="delete-form">
+            <button
+              type="submit"
+              class="modal__submit_btn modal__submit_btn_delete"
+              aria-label="Delete"
+            >
+              Delete
+            </button>
+            <button
+              type="button"
+              class="modal__submit_btn modal__submit_btn_cancel"
+              aria-label="Cancel"
+            >
+              Cancel
+            </button>
+          </form>
         </div>
       </div>
     </div>
