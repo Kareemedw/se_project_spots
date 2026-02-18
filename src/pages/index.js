@@ -49,6 +49,11 @@ const api = new Api({
   },
 });
 
+let selectedCard;
+let selectedCardId;
+
+let currentUserId = null;
+
 api
   .getAppInfo()
   .then(([cards, user]) => {
@@ -112,11 +117,6 @@ const cardTemplate = document
 
 const cardsList = document.querySelector(".cards__list");
 
-let selectedCard;
-let selectedCardId;
-
-let currentUserId;
-
 function getUserInfo({ name, about, avatar, _id } = {}) {
   profileAbout.textContent = about;
   profileName.textContent = name;
@@ -132,26 +132,33 @@ function handleDeleteCard(cardElement, cardId) {
 
 function handleLikeCard(evt, id) {
   evt.preventDefault();
-  const likeBtn = evt.currentTarget;
-  const isLiked = likeBtn.classList.contains("card__content-image _active");
+
+  const likeButton = evt.currentTarget;
+  if (likeButton.disabled) return;
+
+  likeButton.disabled = true;
+
+  const isLiked = likeButton.classList.contains("card__content-button_active");
 
   api
     .handleLikes(id, isLiked)
     .then((updatedCard) => {
-      const likedNow = updatedCard.likes?.some(
-        (data) => data._id === currentUserId,
+      likeButton.classList.toggle(
+        "card__content-button_active",
+        updatedCard.isLiked,
       );
-      likeBtn.classList.toggle("card__content-image_active", likedNow);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      likeButton.disabled = false;
+    });
 }
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardTitle = cardElement.querySelector(".card__content-name");
   const cardImage = cardElement.querySelector(".card__image");
-  const cardLikeBtn = cardElement.querySelector(".card__content-image");
-  //const cardLikeIcon = cardElement.querySelector(".card__content-image");
+  const likeButton = cardElement.querySelector(".card__content-button");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
@@ -170,11 +177,13 @@ function getCardElement(data) {
 
     openModal(previewCardModal);
   });
+  console.log(data);
 
-  const isLiked = data.likes?.some((u) => u._id === currentUserId);
-  cardLikeBtn.classList.toggle("card__content-image", isLiked);
+  if (data.isLiked) {
+    likeButton.classList.toggle("card__content-button_active");
+  }
 
-  cardLikeBtn.addEventListener("click", (evt) => handleLikeCard(evt, data._id));
+  likeButton.addEventListener("click", (evt) => handleLikeCard(evt, data._id));
   cardDeleteBtn.addEventListener("click", (e) =>
     handleDeleteCard(cardElement, data._id),
   );

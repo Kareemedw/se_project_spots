@@ -65,12 +65,7 @@
                 <div class="card__content">
                   <h2 class="card__content-name"></h2>
                   <button type="button" class="card__content-button">
-                    <img
-                      src="<%=require('./images/heart.svg')%>"
-                      alt="Heart Icon"
-                      class="card__content-image"
-                      aria-label="Like"
-                    />
+                    <div class="card__content-image"></div>
                   </button>
                 </div>
               </li>
@@ -200,7 +195,6 @@
                 class="modal__input"
                 placeholder="Paste the link to an image"
                 minlength="2"
-                maxlength="40"
                 required
               />
               <span id="profile-avatar-input-error" class="modal__error"></span>
