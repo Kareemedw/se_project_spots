@@ -100,10 +100,10 @@
   height: 100%;
   gap: 8px;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
   bottom: 12px;
   visibility: hidden;
+  align-items: flex-end;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
