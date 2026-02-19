@@ -177,7 +177,6 @@ function getCardElement(data) {
 
     openModal(previewCardModal);
   });
-  console.log(data);
 
   if (data.isLiked) {
     likeButton.classList.toggle("card__content-button_active");
