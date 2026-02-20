@@ -2,9 +2,9 @@ export const valdationConfig = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit_btn",
-  inactiveButtonClass: ".modal__submit_btn_type_disabled",
-  inputErrorClass: ".modal__input_type_error",
-  errorClass: ".modal__error",
+  inactiveButtonClass: "modal__submit_btn_type_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error",
 };
 
 const showInputError = (formEl, inputEl, errorMsg) => {
@@ -73,12 +73,3 @@ export const enableValidation = () => {
     setEventListeners(formEl);
   });
 };
-
-const modalExit = Array.from(document.querySelectorAll(".modal"));
-modalExit.forEach((modal) => {
-  modal.addEventListener("mousedown", (evt) => {
-    if (evt.target === modal) {
-      closeModal(modal);
-    }
-  });
-});
