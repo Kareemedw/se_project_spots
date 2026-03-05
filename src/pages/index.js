@@ -1,7 +1,7 @@
 import "./index.css";
 import Api from "../scripts/Api.js";
 
-import { setButtonText } from "../../utilis/helperFunction.js";
+import { setButtonText } from "../utilis/helperFunction.js";
 
 import {
   enableValidation,
